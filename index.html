@@ -69,22 +69,108 @@
       // 심화 자바스크립트
 
       // 1. 스프레드 연산자 (...)
+      const array = [2, 3, 5, 7, 11];
 
+      console.log(array);
+      console.log(...array);
       // 2. 함수형 프로그래밍
       // a. 일반 함수 선언.
+      function func1(a, b) {
+        const sum = a + b;
 
+        return sum;
+      }
+
+      console.log(func1(2, 3));
       // b. 람다식. 익명함수와 화살표 함수
+      const func2 = function (a ,b) {
+        const sub = b - a;
 
+        return sub;
+      }
+      
+      const newfunc = func2;
+
+      console.log(func2(5, 7));
+      console.log(newfunc(5, 7));
+
+      const arrowfunc = (a ,b) => {
+        const mul = a * b;
+
+        return mul;
+      }
+      console.log(arrowfunc(11, 13));
       // 3. 비동기 함수와 콜백 함수.
-
+      setTimeout(() => {
+        console.log("Bye~")
+      }, 1000);
       // 4. 클래스
       // a. 함수를 사용한 클래스 선언 (일반 함수와 익명함수 가능)
+      function Car(people, size) {
+        this.people = people;
+        this.size = size;
 
+        this.getPeople = function() {
+          return this.people;
+        }
+
+        this.getSize = function() {
+          return this.size;
+        }
+      }
+
+      const dreamCar = new Car(5, 'SUV');
+      console.log(dreamCar.getPeople());
+      console.log(dreamCar.getSize());
       // b. class 키워드 사용
+      class House {
+        constructor (size, room) {
+          this.size = size;
+          this.room = room;
+          this.waste = 10;
+        }
 
-      // 5. Web API 1. 브라우저 조작하기
+        clean() {
+          this.waste = 0;
+        }
 
-      // 6. Web API 2. HTML 조작하기
+        getSize() {
+          return this.size;
+        }
+
+        getRoom = function() {
+          return this.room;
+        }
+
+        getWaste = () => this.waste
+      }
+
+      const dreamHouse = new House(80, 6);
+
+      console.log(dreamHouse.getSize());
+      console.log(dreamHouse.getRoom());
+      console.log(dreamHouse.getWaste());
+      dreamHouse.clean();
+      console.log(dreamHouse.getWaste());
+      
+      // 5. Web API 1. HTML 조작하기
+      const button = document.getElementById("btn");
+
+      button.innerText = 'Click Click';
+
+      const onClickHandler = function (event) {
+        alert("Virus ON!");
+      }
+
+      button.addEventListener("click", onClickHandler);
+      // 6. Web API 2. 브라우저 조작하기
+      const easterEgg = document.getElementById("target");
+
+      const eventHandler = (event) => {
+        location.reload();
+      }
+
+      easterEgg.addEventListener("click", eventHandler);
     </script>
   </body>
 </html>
