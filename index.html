@@ -12,14 +12,14 @@
       // 기초 자바스크립트
 
       // 1. 변수 선언
-      const a = 'HELL';
+      const a = "HELL";
       let b = 2357;
       var c = 11;
 
       c = b;
-      
+
       // 2. 자바스크립트의 비교 연산자
-      if (1 == '1') {
+      if (1 == "1") {
         console.log("Good");
       }
 
@@ -36,27 +36,27 @@
         console.log("Good4");
       }
 
-      if (test === '1') {
+      if (test === "1") {
         console.log("Good5");
       }
       // 3. 간단한 콘솔 출력과 alert
-      console.time('time');
+      console.time("time");
 
       console.log("Hell");
-      if (test !== '1') {
+      if (test !== "1") {
         alert("DDAENG");
       }
       console.error("DDAENG");
 
-      console.timeEnd('time');
+      console.timeEnd("time");
       // 4. JSON을 배워보자
       const obj1 = {
-        key1: 'a',
+        key1: "a",
         key2: test,
         obj2: {
           subkey1: a,
-          subkey2: 'test'
-        }
+          subkey2: "test",
+        },
       };
 
       console.log(obj1.obj2.subkey1);
@@ -65,15 +65,26 @@
       obj1.obj2.subnewkey = b;
       console.log(obj1.newkey);
       console.log(obj1.obj2.subnewkey);
+
       // 심화 자바스크립트
 
-      // 1. 함수형 프로그래밍, 일반 함수 선언, 익명 함수 선언, 람다식.
+      // 1. 스프레드 연산자 (...)
 
-      // 2. 비동기 함수와 콜백 함수.
+      // 2. 함수형 프로그래밍
+      // a. 일반 함수 선언.
 
-      // 3. Web API 1. 브라우저 조작하기
+      // b. 람다식. 익명함수와 화살표 함수
 
-      // 4. Web API 2. HTML 조작하기
+      // 3. 비동기 함수와 콜백 함수.
+
+      // 4. 클래스
+      // a. 함수를 사용한 클래스 선언 (일반 함수와 익명함수 가능)
+
+      // b. class 키워드 사용
+
+      // 5. Web API 1. 브라우저 조작하기
+
+      // 6. Web API 2. HTML 조작하기
     </script>
   </body>
 </html>
